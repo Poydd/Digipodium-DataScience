@@ -1,30 +1,28 @@
 from turtle import *
 import turtle
 
-fd(100)
-rt(90)
-fd(100)
-rt(90)
-fd(100)
-rt(90)
-fd(100)
+wn = turtle.Screen()
+wn.setup(width=400, height=400)
+red = turtle.Turtle() 
 
-def star():
- rt(75)
- fd(100)
+def curve(): 
+    for i in range(200): 
+        red.right(1)
+        red.forward(1)
 
-for i in range(4):
- rt(144)
- fd(100)
+def heart():  
+    red.fillcolor('red')
+    red.begin_fill()
+    red.left(140)
+    red.forward(113)
+    curve()
+    red.left(120)
+    curve() 
+    red.forward(112)
+    red.end_fill()
 
-def parallelogram():
-  for i in range(2):
-   fd(100)
-   lt(60)
-   fd(50)
-   lt(120)
-
-   
+heart()
 
 hideturtle()
 mainloop()
+
