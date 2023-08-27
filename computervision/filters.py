@@ -4,9 +4,8 @@ import cv2
 
 
 CAM_IDX = 0
-cv2.namedWindow('Canny')
 cam = cv2.VideoCapture(CAM_IDX)
-
+cv2.namedWindow('canny')
 lowthreshold = cv2.createTrackbar('Low Threshold', 'canny', 0, 1000,lambda x:None)
 highthreshold = cv2.createTrackbar('High Threshold', 'canny', 0, 1000,lambda x:None)
 while cam.isOpened():
